@@ -28,12 +28,13 @@
         }
 
         .restaurant-card {
-            flex-basis: 30%;
-            border: 1px solid #ddd;
-            padding: 10px;
+            flex-basis: calc(33.33% - 20px);
             margin: 10px;
             background-color: #fff;
+            border: 1px solid #ddd;
             border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
         button {
@@ -60,10 +61,11 @@
 <body>
 
     <header>
-        <h1>Baker Street - Restaurants</h1>
+        <h1>Danubius Hotel Regents Park</h1>
+        <p>Nearby Restaurants</p>
     </header>
 
-    <img class="restaurant-image" src="baker.png" alt="Hotel Image">
+    <img class="restaurant-image" src="hotel_image.jpg" alt="Hotel Image">
 
    <section>
         <div class="restaurant-card">
@@ -124,6 +126,7 @@
 
         <div class="restaurant-card">
             <h3>Nando's</h3>
+           
             <p>Address: 37-38 Great St Andrew St, London EC4A 3DE</p>
         </div>
 
@@ -156,9 +159,9 @@
             <h3>Gordon Ramsay Bar & Grill</h3>
             <p>Address: 10 Downing St, London SW1A 2AA</p>
         </div>
-
-       <button onclick="printRestaurants()">Print All Details</button>
     </section>
+
+    <button onclick="printRestaurants()">Print All Details</button>
 
     <script>
         function printRestaurants() {
